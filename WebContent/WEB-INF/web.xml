@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>bbs</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <description></description>
+    <display-name>indexSelect</display-name>
+    <servlet-name>indexSelect</servlet-name>
+    <servlet-class>cn.chenxi.bbs.servlet.IndexSelect</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>indexSelect</servlet-name>
+    <url-pattern>/indexSelect</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>post_Servlet</display-name>
+    <servlet-name>post_Servlet</servlet-name>
+    <servlet-class>cn.chenxi.bbs.servlet.Post_Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>post_Servlet</servlet-name>
+    <url-pattern>/post_Servlet.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>postDelete</display-name>
+    <servlet-name>postDelete</servlet-name>
+    <servlet-class>cn.chenxi.bbs.servlet.PostDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>postDelete</servlet-name>
+    <url-pattern>/postDelete.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>postMag_Servlet</display-name>
+    <servlet-name>postMag_Servlet</servlet-name>
+    <servlet-class>cn.chenxi.bbs.servlet.PostMag_Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>postMag_Servlet</servlet-name>
+    <url-pattern>/postMag_Servlet.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>userServlet</display-name>
+    <servlet-name>userServlet</servlet-name>
+    <servlet-class>cn.chenxi.bbs.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userServlet</servlet-name>
+    <url-pattern>/userServlet.action</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+    <display-name>sessionFilter</display-name>
+    <filter-name>sessionFilter</filter-name>
+    <filter-class>cn.chenxi.bbs.filter.SessionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>sessionFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+</web-app>
